@@ -23,6 +23,8 @@ services:
     image: prom/blackbox-exporter
     restart: unless-stopped
     cap_add: [NET_RAW]
+    user: root
+
   speedtest:
     image: miguelndecarvalho/speedtest-exporter
     restart: unless-stopped
